@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 :root {
   --color-1: #04151f;
@@ -6,7 +6,8 @@
   --color-3: #efd6ac;
   --color-4: #c44900;
   --color-5: #432534;
-  --font-family: "Titillium Web", sans-serif;
+  --font-family-1: "Titillium Web", sans-serif;
+  --font-family-2: "Source Sans 3", sans-serif;
   --title-font-weight: 700;
   --paragraph-font-weight: 400;
 }
@@ -31,7 +32,7 @@ body {
 }
 
 .header {
-  font-family: var(--font-family);
+  font-family: var(--font-family-1);
   font-style: normal;
   display: flex;
   justify-content: center;
@@ -114,7 +115,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  font-family: var(--font-family);
+  font-family: var(--font-family-1);
   color: var(--color-3);
 }
 
@@ -133,7 +134,7 @@ body {
   transform: translate(0%, -50%);
 }
 
-.info-cards-right-arrow {
+.info-cards-arrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,4 +183,6 @@ body {
 .info-experience-card-content-p,
 .info-contact-card-content-p {
     font-size: 0.8rem;
+    font-family: var(--font-family-2);
+    font-optical-sizing: auto;
 }
