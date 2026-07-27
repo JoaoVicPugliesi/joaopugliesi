@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
 :root {
   --color-1: #04151f;
@@ -19,10 +19,10 @@
 }
 
 body {
-  height: 100vh;
+  width: 100%;
   height: 100dvh;
   background: var(--color-3);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .header,
@@ -52,7 +52,7 @@ body {
   font-size: clamp(1rem, 1.5rem, 2rem);
 }
 
-.header-language-switcher {
+.header-language-opener {
   position: absolute;
   z-index: 2;
   top: 10%;
@@ -69,7 +69,7 @@ body {
   align-items: center;
 }
 
-.header-language-options {
+.header-languages {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -78,21 +78,32 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--color-5);
-  top: 0%;
-  left: -100%;
+  top: -100%;
+  left: 0;
+  transition: all 0.4s ease;
 }
 
-.header-language-options.opened {
-  top: 0%;
+.header-languages.opened {
+  top: 0;
+}
+
+.header-language-options {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-language-option {
+  width: 15rem;
   cursor: pointer;
-  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--color-3);
+  border-radius: 0.1rem;
 }
 
 .info-cards {
@@ -108,7 +119,7 @@ body {
 .info-contact-card {
   width: 10rem;
   height: 100%;
-  background: var(--color-1);
+  background: var(--color-2);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -117,12 +128,31 @@ body {
   border-radius: 0.5rem;
   font-family: var(--font-family-1);
   color: var(--color-3);
+  will-change: width;
+  transition:
+    width 0.5s ease,
+    transform 0.5s ease;
+  opacity: 0;
+  transform: rotate(-22deg);
+}
+
+.info-about-card.appearence,
+.info-experience-card.appearence,
+.info-contact-card.appearence {
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
 .info-about-card.opened,
 .info-experience-card.opened,
 .info-contact-card.opened {
-    width: 30rem;
+  width: 30rem;
+}
+
+.info-about-card.opened,
+.info-experience-card.opened,
+.info-contact-card.opened {
+  width: 30rem;
 }
 
 .info-about-card-header,
@@ -130,8 +160,10 @@ body {
 .info-contact-card-header {
   position: absolute;
   top: 50%;
-  left: 0%;
-  transform: translate(0%, -50%);
+  left: 0;
+  height: max-content;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
 }
 
 .info-cards-arrow {
@@ -146,43 +178,172 @@ body {
   top: 0%;
   width: max-content;
   cursor: pointer;
+  transition: all 0.5s ease;
+  height: 100%;
+  width: 1.5rem;
 }
 
 .info-about-card-header,
 .info-experience-card-header,
 .info-contact-card-header {
-    padding: 1rem;
-    user-select: none;
+  padding: 1rem;
+  user-select: none;
+}
+
+.info-about-card.opened .info-about-card-header,
+.info-experience-card.opened .info-experience-card-header,
+.info-contact-card.opened .info-contact-card-header {
+  height: 2rem;
+  width: 3rem;
+  top: 0;
+  transform: rotate(270deg);
+}
+
+.info-about-card.opened .info-cards-arrow,
+.info-experience-card.opened .info-cards-arrow,
+.info-contact-card.opened .info-cards-arrow {
+  top: 100%;
+  width: 100%;
+  height: 1.5rem;
+  transform: translateY(-100%) rotate(180deg);
+}
+
+.info-about-card.opened .info-cards-arrow i,
+.info-experience-card.opened .info-cards-arrow i,
+.info-contact-card.opened .info-cards-arrow i {
+  transition: all 0.4s ease 0.4s;
+}
+
+.info-about-card.opened .info-cards-arrow i,
+.info-experience-card.opened .info-cards-arrow i,
+.info-contact-card.opened .info-cards-arrow i {
+  transform: rotate(90deg);
+}
+
+.info-about-card.opened .info-about-card-header h3,
+.info-experience-card.opened .info-experience-card-header h3,
+.info-contact-card.opened .info-contact-card-header h3 {
+  transform: rotate(90deg);
 }
 
 .info-about-card-content,
 .info-experience-card-content,
 .info-contact-card-content {
-    opacity: 0;
-    z-index: -1;
-    width: 80%;
-    padding: 0.5rem;
+  opacity: 0;
+  z-index: -1;
+  width: 80%;
+  padding: 0.5rem;
+  will-change: opacity, z-index;
+  transition: opacity 0.5s ease;
 }
 
 .info-about-card-content.visible,
 .info-experience-card-content.visible,
 .info-contact-card-content.visible {
-    opacity: 1;
-    z-index: 1;
+  opacity: 1;
+  z-index: 1;
 }
 
 .info-about-card-content-banner,
 .info-experience-card-content-banner,
 .info-contact-card-content-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-about-card-content-p,
 .info-experience-card-content-p,
 .info-contact-card-content-p {
-    font-size: 0.8rem;
-    font-family: var(--font-family-2);
-    font-optical-sizing: auto;
+  font-size: 0.8rem;
+  font-family: var(--font-family-2);
+  font-optical-sizing: auto;
+  font-size: 1rem;
+}
+
+.main-bio {
+  width: 100%;
+  height: 100dvh;
+  background: var(--color-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-1);
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-bio-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-3);
+}
+
+.main-bio-header h3 {
+  font-weight: var(--title-font-weight);
+  font-size: clamp(3rem, 4rem, 5rem);
+  user-select: none;
+  color: var(--color-3);
+}
+
+.main-bio-header p {
+  font-weight: var(--paragraph-font-weight);
+  font-size: clamp(1rem, 1.5rem, 2rem);
+}
+
+.main-bio-content {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-bio-photo {
+  background: var(--color-3);
+  width: 15rem;
+  height: 25rem;
+  border-radius: 0.3rem;
+  border: 2px var(--color-3) solid;
+}
+
+.main-bio-photo img { 
+  width: 100%;
+  border-radius: 0.3rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-bio-projects {
+  width: 20rem;
+  height: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-bio-project {
+  height: 20%;
+  border-radius: 0.3rem;
+  background: var(--color-3);
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  color: var(--color-2);
+  user-select: none;
+  cursor: pointer;
+}
+
+.main-bio-project h3 {
+  position: absolute;
+}
+
+.main-bio-project img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
 }

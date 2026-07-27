@@ -1,0 +1,30 @@
+[
+    {
+        "id": "PT",
+        "name": "Portuguese",
+        "cards_headers": [
+            ["S", "O", "B", "R", "E"],
+            ["E", "X", "P", "E", "R", "I", "Ê", "N", "C", "I", "A"],
+            ["C", "O", "N", "T", "A", "T", "O"]
+        ],
+        "cards_content": [
+            "Meu nome é João Pugliesi, tenho 21 anos e nasci no Brasil. Sou alguém que deseja fazer a diferença no cenário tecnológico, oferecendo soluções criativas e estando aberto a abraçar novas ideias. Atualmente, busco uma oportunidade para demonstrar minhas habilidades e adquirir a experiência necessária para crescer, não apenas profissionalmente, mas também como pessoa. Estou concluindo minha graduação em Ciência da Computação no próximo ano e já me sinto pronto para novas aventuras.",
+            "Até agora, não tenho uma vasta experiência profissional. Isso não se deve a questões de personalidade, mas sim ao fato de eu acreditar que ainda não estava pronto para contribuir com outras pessoas. No entanto, após estudar e adquirir experiência no desenvolvimento de diversos tipos de software (e-commerce, sistemas de check-in variados, entretenimento e, mais recentemente, sites pessoais), sinto-me preparado para um novo desafio, pois agora percebo que posso colaborar de várias maneiras.",
+            ""
+        ]
+    },
+    {
+        "id": "EN",
+        "name": "English",
+        "cards_headers": [
+            ["A", "B", "O", "U", "T"],
+            ["E", "X", "P", "E", "R", "I", "E", "N", "C", "E"],
+            ["C", "O", "N", "T", "A", "C", "T"]
+        ],
+        "cards_content": [
+            "My Name is João Pugliesi, 21 years old borned in Brazil. I am a guy who wishes to make difference on technology scenario by providing creative solutions/being open to hug new ideas. Nowadays i'm looking for a job to prove my abilities while gaining necessary experience to grow up not only as a professional but also as an individual. I'm finishing a science computer degree next year and already feel ready for new adventures",
+            "I never had a huge experience working on my life so far. Not because of personality issues, but for believing i was not ready for contributing with other people. Now while studying and having some experience developing different types of software (E-commerce, Several Types of Check-in, Entertainement, and now personal websites) i feel ready for a new challenge, because now i feel like i can collaborate on several ways",
+            ""
+        ]
+    }
+]
