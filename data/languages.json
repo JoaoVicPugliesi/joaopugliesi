@@ -1,7 +1,15 @@
 [
     {
-        "id": "PT",
-        "name": "Portuguese",
+        "id": "br",
+        "name": "Brazilian Portuguese",
+        "headers": [
+            "João Pugliesi",
+            "Explore meus projetos e saiba mais de mim"
+        ],
+        "paraghaphs": [
+            "Desenvolvedor Web and Amante da Tecnologia",
+            "Explore meus projetos and saiba mais sobre mim"
+        ],
         "cards_headers": [
             ["S", "O", "B", "R", "E"],
             ["E", "X", "P", "E", "R", "I", "Ê", "N", "C", "I", "A"],
@@ -14,8 +22,16 @@
         ]
     },
     {
-        "id": "EN",
-        "name": "English",
+        "id": "um",
+        "name": "American English",
+        "headers": [
+            "João Pugliesi",
+            "Explore my projects and notice more about me"
+        ],
+        "paraghaphs": [
+            "Web Developer and Technology Lover",
+            "Explore my projects and notice more about me"
+        ],
         "cards_headers": [
             ["A", "B", "O", "U", "T"],
             ["E", "X", "P", "E", "R", "I", "E", "N", "C", "E"],
