@@ -298,6 +298,10 @@ body {
   font-size: 1rem;
 }
 
+a {
+  outline: none;
+}
+
 .main-bio {
   width: 100%;
   height: 100dvh;
