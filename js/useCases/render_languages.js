@@ -1,16 +1,15 @@
-import fetch_languages_data from "./fetch_languages_data.js";
-
 const options = document.querySelector('.header-languages-options');
 
-async function render_languages() {
-    const resp = await fetch_languages_data();
+async function render_languages(resp) {
     if(!resp) return;
     options.innerHTML = '';
     const resp_len = resp.length;
+    const selected_language = localStorage.getItem('selected_language');
     for(let i = 0; i < resp_len; i++) {
         const language = resp[i];
+        const is_selected = selected_language == language.id;
         options.innerHTML += `
-        <div class="header-languages-option">
+        <div class="header-languages-option ${is_selected ?? 'selected'}" data-id="${language.id}">
             <img src="images/country-flags/${language.id}.svg" alt="">
         </div>
         `
