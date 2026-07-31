@@ -26,7 +26,6 @@
 }
 
 .body.dark {
-  
 }
 
 .header,
@@ -51,7 +50,7 @@
   height: 100dvh;
   overflow: hidden;
   background: var(--color-3);
-} 
+}
 
 .header-name,
 .main-bio-header h3 {
@@ -278,7 +277,6 @@ img {
 .info-experience-card-header,
 .info-contact-card-header {
   gap: 5rem;
-  
 }
 .info-about-card.opened .info-about-card-header h3,
 .info-experience-card.opened .info-experience-card-header h3,
@@ -297,7 +295,8 @@ img {
   transition: opacity 0.5s ease;
 }
 
-.info-contact-card-content, .info-contact-card-content div {
+.info-contact-card-content,
+.info-contact-card-content div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,7 +317,6 @@ img {
   outline: none;
   text-decoration: underline;
 }
-
 
 .info-contact-card-content div a:hover {
   text-decoration: none;
@@ -419,7 +417,9 @@ a {
   cursor: pointer;
   user-select: none;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .main-bio-project h3 {
@@ -496,8 +496,8 @@ a {
   .head-bio {
     height: max-content;
     padding: 1rem;
-  } 
-  
+  }
+
   .main-bio {
     height: max-content;
     padding: 1rem;
@@ -560,5 +560,24 @@ a {
     left: 95%;
     transform: translate(-95%, -1%);
     overflow: hidden;
+  }
+}
+
+@media (max-width: 380px) {
+  .main-bio-projects {
+    width: 15rem;
+  }
+  .main-bio-project {
+    height: 20%;
+    width: 100%;
+  }
+  .main-bio-project h3 {
+    font-size: 0.8rem;
+  }
+
+  .info-about-card.opened,
+  .info-experience-card.opened,
+  .info-contact-card.opened {
+    width: 15rem;
   }
 }
