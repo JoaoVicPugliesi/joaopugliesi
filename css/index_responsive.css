@@ -31,6 +31,14 @@
     height: 20%;
   }
 
+  .head-bio {
+    height: 150dvh;
+  } 
+  
+  .main-bio {
+    height: 150dvh;
+  }
+
   .info-cards {
     height: 80%;
   }
