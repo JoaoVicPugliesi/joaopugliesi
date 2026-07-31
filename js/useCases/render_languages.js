@@ -10,7 +10,7 @@ async function render_languages(resp) {
         const is_selected = selected_language == language.id;
         options.innerHTML += `
         <div class="header-languages-option ${is_selected ?? 'selected'}" data-id="${language.id}">
-            <img src="images/country-flags/${language.id}.svg" alt="">
+            <img src="images/country-flags/${language.id}.svg" alt="" draggable="false">
         </div>
         `
     }

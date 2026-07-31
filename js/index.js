@@ -1,4 +1,5 @@
 import appearence_animations from "./useCases/appearence_animations.js";
+import { initializeTheme, darkmode_onclick } from "./useCases/darkmode.js";
 import fetch_languages_data from "./useCases/fetch_languages_data.js";
 import load_language_object from "./useCases/load_language_object.js";
 import open_cards from "./useCases/open_cards.js";
@@ -9,8 +10,9 @@ import select_language from "./useCases/select_language.js";
 document.addEventListener('DOMContentLoaded', async () => {
     const selected_language = localStorage.getItem('selected_language');
     if(selected_language == undefined) {
-        localStorage.setItem('selected_language', 'br')
+        localStorage.setItem('selected_language', 'br');
     };
+    initializeTheme();
     const data = await fetch_languages_data();
     load_language_object(data);
     open_cards();
@@ -18,4 +20,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     open_languages_list();
     await render_languages(data);
     select_language(data);
+    darkmode_onclick();
 });

@@ -19,13 +19,15 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   width: 100%;
   height: max-content;
-  background: var(--color-3);
   overflow-x: hidden;
 }
 
+.body.dark {
+  
+}
 
 .header,
 .info-cards {
@@ -48,6 +50,7 @@ body {
 .head-bio {
   height: 100dvh;
   overflow: hidden;
+  background: var(--color-3);
 } 
 
 .header-name,
@@ -199,6 +202,10 @@ body {
 .info-experience-card.opened,
 .info-contact-card.opened {
   width: 30rem;
+}
+
+img {
+  user-select: none;
 }
 
 .info-about-card-header,

@@ -1,0 +1,107 @@
+.body.dark .head-bio {
+  background: #04151f;
+}
+
+.body.dark .main-bio {
+  background: #0b1116;
+}
+
+.body.dark .header-name {
+  color: #efd6ac;
+}
+
+.body.dark .header-p {
+  color: #cbb38d;
+}
+
+.body.dark .main-bio-header h3 {
+  color: #efd6ac;
+}
+
+.body.dark .main-bio-header p {
+  color: #d9c29c;
+}
+
+.body.dark .header-dark-mode {
+  background: #183a37;
+  color: #efd6ac;
+  border: 1px solid #24514c;
+}
+
+.body.dark .header-language-opener {
+  background: #183a37;
+  color: #efd6ac;
+}
+
+.body.dark .header-languages-options {
+  background: #183a37;
+}
+
+.body.dark .header-languages-option {
+  border-bottom: 1px solid #24514c;
+}
+
+.body.dark .header-languages-option:hover {
+  background: #24514c;
+}
+
+.body.dark .header-languages-option.selected {
+  background: #24514c;
+}
+
+.body.dark .info-about-card,
+.body.dark .info-experience-card,
+.body.dark .info-contact-card {
+  background: #183a37;
+  color: #efd6ac;
+  border: 1px solid rgba(239,214,172,.08);
+  box-shadow: 0 12px 35px rgba(0,0,0,.35);
+}
+
+.body.dark .info-about-card-header,
+.body.dark .info-experience-card-header,
+.body.dark .info-contact-card-header {
+  color: #efd6ac;
+}
+
+.body.dark .info-cards-arrow {
+  background: #c44900;
+  color: #efd6ac;
+}
+
+.body.dark .info-about-card-content,
+.body.dark .info-experience-card-content,
+.body.dark .info-contact-card-content {
+  color: #efd6ac;
+}
+
+.body.dark .info-contact-card-content a {
+  color: #efd6ac;
+}
+
+.body.dark .info-contact-card-content a:hover {
+  color: #ff9b4a;
+}
+.body.dark .main-bio-photo {
+  background: #183a37;
+  border: 2px solid #24514c;
+}
+
+.body.dark .main-bio-project {
+  background: #183a37;
+  color: #efd6ac;
+  border: 1px solid rgba(239,214,172,.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.body.dark .main-bio-project:hover {
+  background: #24514c;
+}
+
+.body.dark .main-bio-project:hover h3 {
+  color: #efd6ac;
+}
+
+.body.dark .main-bio-project-mask {
+  background: #c44900;
+}
