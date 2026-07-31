@@ -541,19 +541,19 @@ a {
     width: 20rem;
   }
   .header-dark-mode {
-    top: 1%;
+    top: 1.5%;
     background: var(--color-2-clearer);
     left: 5%;
-    transform: translate(-5%, -1%);
+    transform: translate(-5%, -1.5%);
     border-radius: 0.3rem;
     color: var(--color-3);
     cursor: pointer;
   }
 
   .header-languages {
-    top: 5%;
-    left: 5%;
-    transform: translate(-5%, -5%);
+    top: 1%;
+    left: 95%;
+    transform: translate(-95%, -1%);
     overflow: hidden;
   }
   .main-bio-project h3 {
