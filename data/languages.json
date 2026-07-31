@@ -4,7 +4,7 @@
         "name": "Brazilian Portuguese",
         "headers": [
             "João Pugliesi",
-            "Explore meus projetos e saiba mais de mim"
+            "Imagem de Perfil e Projetos"
         ],
         "paragraphs": [
             "Desenvolvedor Web and Amante da Tecnologia",
@@ -26,7 +26,7 @@
         "name": "American English",
         "headers": [
             "João Pugliesi",
-            "Explore my projects and notice more about me"
+            "Profile image and Projects"
         ],
         "paragraphs": [
             "Web Developer and Technology Lover",
@@ -42,5 +42,27 @@
             "I never had a huge experience working on my life so far. Not because of personality issues, but for believing i was not ready for contributing with other people. Now while studying and having some experience developing different types of software (E-commerce, Several Types of Check-in, Entertainement, and now personal websites) i feel ready for a new challenge, because now i feel like i can collaborate on several ways",
             ""
         ]
-    }
+    },
+    {
+    "id": "es",
+    "name": "Español",
+    "headers": [
+        "João Pugliesi",
+        "Explora mis proyectos y conoce más sobre mí"
+    ],
+    "paragraphs": [
+        "Desarrollador Web y Apasionado por la Tecnología",
+        "Explora mis proyectos y conoce más sobre mí"
+    ],
+    "cards_headers": [
+        ["A", "C", "E", "R", "C", "A"],
+        ["E", "X", "P", "E", "R", "I", "E", "N", "C", "I", "A"],
+        ["C", "O", "N", "T", "A", "C", "T", "O"]
+    ],
+    "cards_content": [
+        "Mi nombre es João Pugliesi, tengo 21 años y nací en Brasil. Soy una persona que desea marcar la diferencia en el mundo de la tecnología, ofreciendo soluciones creativas y estando siempre abierta a adoptar nuevas ideas. Actualmente, busco una oportunidad para demostrar mis habilidades y adquirir la experiencia necesaria para crecer, no solo como profesional, sino también como persona. El próximo año finalizaré mi carrera en Ciencias de la Computación y ya me siento preparado para afrontar nuevos desafíos.",
+        "Hasta ahora, no cuento con una amplia experiencia profesional. Esto no se debe a cuestiones de personalidad, sino a que sentía que aún no estaba preparado para aportar a otras personas. Sin embargo, después de estudiar y adquirir experiencia desarrollando distintos tipos de software (comercio electrónico, diversos sistemas de registro, aplicaciones de entretenimiento y, más recientemente, sitios web personales), considero que estoy listo para un nuevo desafío, ya que ahora sé que puedo contribuir de muchas maneras.",
+        ""
+    ]
+}
 ]

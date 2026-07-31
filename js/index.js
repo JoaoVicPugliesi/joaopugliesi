@@ -7,6 +7,10 @@ import render_languages from "./useCases/render_languages.js";
 import select_language from "./useCases/select_language.js";
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const selected_language = localStorage.getItem('selected_language');
+    if(selected_language == undefined) {
+        localStorage.setItem('selected_language', 'br')
+    };
     const data = await fetch_languages_data();
     load_language_object(data);
     open_cards();

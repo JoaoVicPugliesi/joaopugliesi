@@ -6,7 +6,6 @@ const card_2_header = document.querySelector('.info-experience-card-header');
 const card_3_header = document.querySelector('.info-contact-card-header');
 const card_1_paragraph = document.querySelector('.info-about-card-content-p');
 const card_2_paragraph = document.querySelector('.info-experience-card-content-p');
-const card_3_paragraph = document.querySelector('.info-contact-card-content-p');
 const main_header_name = document.querySelector('.main-bio-header h3');
 const main_header_p = document.querySelector('.main-bio-header p');
 
@@ -50,7 +49,6 @@ function load_language_object (data) {
     })
     card_1_paragraph.textContent = cards_content[0];
     card_2_paragraph.textContent = cards_content[1];
-    card_3_paragraph.textContent = cards_content[2];
 }
 
 export default load_language_object;

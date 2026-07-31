@@ -21,15 +21,16 @@
 
 body {
   width: 100%;
-  height: 100dvh;
+  height: max-content;
   background: var(--color-3);
   overflow-x: hidden;
 }
 
+
 .header,
 .info-cards {
   width: 100%;
-  height: 50%;
+  height: 70%;
 }
 
 .header {
@@ -40,24 +41,35 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
+  height: 30%;
 }
 
-.header-name, .main-bio-header h3 {
+.head-bio {
+  height: 100dvh;
+  overflow: hidden;
+} 
+
+.header-name,
+.main-bio-header h3 {
   font-weight: var(--title-font-weight);
-  font-size: clamp(2rem, 3.5rem, 4rem);
+  font-size: clamp(2rem, 3rem, 4rem);
   user-select: none;
 }
 
-.header-p, .main-bio-header p {
+.header-p,
+.main-bio-header p {
   font-weight: var(--paragraph-font-weight);
   font-size: clamp(1rem, 1.5rem, 2rem);
 }
 
-.main-bio-header h3, .main-bio-header p {
+.main-bio-header h3,
+.main-bio-header p {
   color: var(--color-3);
 }
 
-.header-languages, .header-dark-mode {
+.header-languages,
+.header-dark-mode {
   position: fixed;
   z-index: 3;
   display: flex;
@@ -92,11 +104,10 @@ body {
 }
 
 .header-language-opener i {
-  transition:
-    transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
-.header-language-opener img, 
+.header-language-opener img,
 .header-languages-option img {
   width: 1.8rem;
   border-radius: 0.1rem;
@@ -122,8 +133,7 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   cursor: pointer;
-  transition:
-    transform 0.5s ease;
+  transition: transform 0.5s ease;
   transform: translateX(100%);
 }
 
@@ -160,7 +170,7 @@ body {
 .info-experience-card,
 .info-contact-card {
   width: 10rem;
-  height: 100%;
+  height: 25rem;
   background: var(--color-2);
   position: relative;
   overflow: hidden;
@@ -191,12 +201,6 @@ body {
   width: 30rem;
 }
 
-.info-about-card.opened,
-.info-experience-card.opened,
-.info-contact-card.opened {
-  width: 30rem;
-}
-
 .info-about-card-header,
 .info-experience-card-header,
 .info-contact-card-header {
@@ -206,6 +210,7 @@ body {
   height: max-content;
   transform: translateY(-50%);
   transition: all 0.5s ease;
+  text-align: center;
 }
 
 .info-cards-arrow {
@@ -262,6 +267,12 @@ body {
   transform: rotate(90deg);
 }
 
+.info-about-card-header,
+.info-experience-card-header,
+.info-contact-card-header {
+  gap: 5rem;
+  
+}
 .info-about-card.opened .info-about-card-header h3,
 .info-experience-card.opened .info-experience-card-header h3,
 .info-contact-card.opened .info-contact-card-header h3 {
@@ -277,6 +288,33 @@ body {
   padding: 0.5rem;
   will-change: opacity, z-index;
   transition: opacity 0.5s ease;
+}
+
+.info-contact-card-content, .info-contact-card-content div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-contact-card-content div i {
+  font-size: 2rem;
+}
+
+.info-contact-card-content div i {
+  font-size: 3rem;
+}
+
+.info-contact-card-content div a {
+  color: var(--color-3);
+  outline: none;
+  text-decoration: underline;
+}
+
+
+.info-contact-card-content div a:hover {
+  text-decoration: none;
 }
 
 .info-about-card-content.visible,
@@ -295,8 +333,7 @@ body {
 }
 
 .info-about-card-content-p,
-.info-experience-card-content-p,
-.info-contact-card-content-p {
+.info-experience-card-content-p {
   font-size: 0.8rem;
   font-family: var(--font-family-2);
   font-optical-sizing: auto;
@@ -316,7 +353,7 @@ a {
   align-items: center;
   font-family: var(--font-family-1);
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .main-bio-header {
@@ -342,7 +379,7 @@ a {
   border: 2px var(--color-3) solid;
 }
 
-.main-bio-photo img { 
+.main-bio-photo img {
   width: 100%;
   border-radius: 0.3rem;
   height: 100%;
@@ -360,24 +397,58 @@ a {
 
 .main-bio-project {
   height: 20%;
-  border-radius: 0.3rem;
-  background: var(--color-3);
   width: 100%;
-  display: flex; 
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
   justify-content: center;
   align-items: center;
+
+  background: var(--color-3);
   color: var(--color-2);
-  user-select: none;
+  border-radius: 0.3rem;
+
   cursor: pointer;
+  user-select: none;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .main-bio-project h3 {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.main-bio-project-mask {
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: var(--color-1);
+  border-radius: inherit;
+  z-index: 1;
+
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.main-bio-project:hover .main-bio-project-mask {
+  transform: translateX(0%);
+}
+
+.main-bio-project:hover {
+  transform: translateY(-2px);
+}
+
+.main-bio-project:hover h3 {
+  color: var(--color-3);
 }
 
 .main-bio-project img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-
 }
