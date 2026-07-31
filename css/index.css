@@ -515,12 +515,7 @@ a {
   }
 
   .main-bio-projects {
-    width: 20rem;
-    height: 25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    width: 15rem;
   }
 
   .info-cards {
@@ -556,23 +551,19 @@ a {
   }
 
   .header-languages {
-    top: 1%;
-    left: 95%;
-    transform: translate(-95%, -1%);
+    top: 5%;
+    left: 5%;
+    transform: translate(-5%, -5%);
     overflow: hidden;
+  }
+  .main-bio-project h3 {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 380px) {
-  .main-bio-projects {
-    width: 15rem;
-  }
-  .main-bio-project {
-    height: 20%;
-    width: 100%;
-  }
   .main-bio-project h3 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .info-about-card.opened,
