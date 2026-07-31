@@ -32,11 +32,13 @@
   }
 
   .head-bio {
-    height: 150dvh;
+    height: max-content;
+    padding: 1rem;
   } 
   
   .main-bio {
-    height: 150dvh;
+    height: max-content;
+    padding: 1rem;
   }
 
   .info-cards {
