@@ -553,6 +553,16 @@ a {
     padding: 0.5rem;
   }
 
+.main-bio-projects::-webkit-scrollbar,
+.info-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.main-bio-projects::-webkit-scrollbar-thumb,
+.info-cards::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
   .main-bio-photo {
     width: 10rem;
     height: 10rem;
