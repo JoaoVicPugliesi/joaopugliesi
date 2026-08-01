@@ -79,12 +79,20 @@
   color: #efd6ac;
 }
 
+.info-contact-card-content a:hover {
+  color: #ff9b4a;
+}
+
 .body.dark .info-contact-card-content a:hover {
   color: #ff9b4a;
 }
 .body.dark .main-bio-photo {
   background: #183a37;
   border: 2px solid #24514c;
+}
+
+.body.dark .header-vinil-holder {
+  color: var(--color-4);
 }
 
 .body.dark .main-bio-project {
