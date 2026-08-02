@@ -52,7 +52,7 @@
 .body.dark .info-about-card,
 .body.dark .info-experience-card,
 .body.dark .info-contact-card {
-  background: #183a37;
+  background: var(--color-2-clearer);
   color: #efd6ac;
   border: 1px solid rgba(239,214,172,.08);
   box-shadow: 0 12px 35px rgba(0,0,0,.35);
@@ -96,7 +96,7 @@
 }
 
 .body.dark .main-bio-project {
-  background: #183a37;
+  background: var(--color-2-clearer);
   color: #efd6ac;
   border: 1px solid rgba(239,214,172,.08);
   box-shadow: 0 8px 25px rgba(0,0,0,.25);

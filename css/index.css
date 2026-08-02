@@ -25,9 +25,6 @@
   overflow-x: hidden;
 }
 
-.body.dark {
-}
-
 .header,
 .info-cards {
   width: 100%;
@@ -232,6 +229,7 @@
   transform: rotate(-22deg);
 }
 
+
 .info-about-card.appearence,
 .info-experience-card.appearence,
 .info-contact-card.appearence {
@@ -320,6 +318,7 @@ img {
 .info-contact-card-header {
   gap: 5rem;
 }
+
 .info-about-card.opened .info-about-card-header h3,
 .info-experience-card.opened .info-experience-card-header h3,
 .info-contact-card.opened .info-contact-card-header h3 {
@@ -344,6 +343,12 @@ img {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.info-contact-card-content div {
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
 }
 
 .info-contact-card-content div i {
@@ -508,18 +513,13 @@ a {
   .main-bio-header h3 {
     font-size: clamp(1rem, 2rem, 3rem);
   }
-}
-
-@media (max-width: 700px) {
-  .main-bio-header h3 {
-    font-size: clamp(1rem, 2rem, 3rem);
-  }
-
   .info-about-card-content-p,
   .info-experience-card-content-p {
     font-size: 0.7rem;
   }
+}
 
+@media (max-width: 700px) {
   .header-p,
   .main-bio-header p {
     font-size: clamp(1rem, 1rem, 1.5rem);
@@ -618,6 +618,24 @@ a {
     top: 95%;
     left: 50%;
     transform: translate(-50%, -95%);
+  }
+}
+
+@media (max-height: 650px) {
+  .info-about-card,
+  .info-experience-card,
+  .info-contact-card {
+    height: 20rem;
+    min-width: 10rem;
+  }
+  .main-bio-photo {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .main-bio, .head-bio {
+    height: max-content;
+    padding: 0.3rem;
   }
 }
 
